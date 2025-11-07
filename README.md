@@ -32,82 +32,102 @@ https://github.com/ETML-RRY/324_inspection_git.git
 
 ### Partie 2 — Exploration de base
 
-1. Combien de branches existent dans le dépôt ? Citez-les.\
- il y a 5 branches.\
+1. Combien de branches existent dans le dépôt ? Citez-les.
+ il y a 5 branches.
+ ```sh
  git branch -a
 
-  dark-mode\
-  header\
-  login\
-  typo\
+  dark-mode
+  header
+  login
+  typo
   main
-
-2. Quels sont les **tags** disponibles ? A quoi correspondent-ils ? \
-ils correspondent au version des releases disponible\
-git tag\
-v0.1\
+```
+2. Quels sont les **tags** disponibles ? A quoi correspondent-ils ? 
+```sh
+ils correspondent au version des releases disponible
+git tag
+v0.1
 v0.2
+```
 
-3. Quelle est la **branche principale** du projet ?\
+3. Quelle est la **branche principale** du projet ?
+```sh
 git branch
 main
-
+```
 ### Partie 3 — Historique et commits
 
-4. Quel est le message du **premier commit** du projet ?\
-git log --reverse\
- Initial commit: structure HTML/CSS/JS + README + docs
-
-5. Trouvez le commit où une **clé API** a été ajoutée par erreur. Quel est son identifiant (hash court) ?\
-git log --grep="API" --oneline\
+4. Quel est le message du **premier commit** du projet ?
+```sh
+git log --reverse
+Initial commit: structure HTML/CSS/JS + README + docs
+```
+5. Trouvez le commit où une **clé API** a été ajoutée par erreur. Quel est son identifiant (hash court) ?
+```sh
+git log --grep="API" --oneline
 bea2d1a
-
-6. Quel commit a ensuite corrigé cette erreur ?\
-git log --grep="API" --oneline\
+```
+6. Quel commit a ensuite corrigé cette erreur ?
+```sh
+git log --grep="API" --oneline
 1b682c9 chore(config): retire la clé API et documente la bonne pratique
-
-7. Trouvez le commit où le **titre de la page d'accueil** a été corrigé.\
-git log --grep="titre" --oneline\
+```
+7. Trouvez le commit où le **titre de la page d'accueil** a été corrigé.
+```sh
+git log --grep="titre" --oneline
 6317c07 (origin/hotfix/typo) hotfix: corrige la typo 'Wolrd' dans le titre
-
-8. Quel est le message du commit qui a **ajouté le fichier `CHANGELOG.md`** et quelle commande avez-vous utilisé ?\
- git log --oneline --name-status\
+```
+8. Quel est le message du commit qui a **ajouté le fichier `CHANGELOG.md`** et quelle commande avez-vous utilisé ?
+```sh
+ it log --oneline --name-status
 docs: ajoute un changelog de base
+```
 
 ### Partie 4 — Branches et fusions
 
-9. Quelles branches ont été fusionnées dans `main` ? \
- git log --merges --oneline\
+9. Quelles branches ont été fusionnées dans `main` ?
+```sh 
+git log --merges --oneline
 login, typo et header
-
-10. Quelle branche **n'a pas été fusionnée** ? Pourquoi, selon vous ? \
-git branch -a --no-merged main\
+```
+10. Quelle branche **n'a pas été fusionnée** ? Pourquoi, selon vous ?
+```sh
+git branch -a --no-merged main
 remotes/origin/experiment/dark-mode n'est pas merge car il est dans la branche experiment qui potentiellement est une branche bac à sable
-
+```
 ### Partie 5 — Analyse du contenu
 
-11. Quelle est la **différence principale** entre les fichiers `index.html` dans les versions `v0.1` et `v0.2` et quelle commande permet de le voir rapidement ? \
-git diff v0.1 v0.2 -- index.html\
+11. Quelle est la **différence principale** entre les fichiers `index.html` dans les versions `v0.1` et `v0.2` et quelle commande permet de le voir rapidement ? 
+```sh
+git diff v0.1 v0.2 -- index.html
 La principale différence est l’ajout de la barre de navigation dans l’en-tête de la page.
-
-12. Que contient la branche `feature/login` ? \
-git branch -v\
+```
+12. Que contient la branche `feature/login` ?
+```sh
+git branch -v
 74cc148 feature(login): ajoute page de connexion et pseudo-fonction JS
-
-13. Dans quelle branche a été ajouté le code pour le **mode sombre** ?  \
-git log --all -S "dark" --oneline\
+```
+13. Dans quelle branche a été ajouté le code pour le **mode sombre** ? 
+```sh
+git log --all -S "dark" --oneline
 dans la branche dark-mode
+```
 
-14. Quelle bonne pratique de sécurité est évoquée dans les commits du fichier `config.js` ?\
-git log -- config.js\
+14. Quelle bonne pratique de sécurité est évoquée dans les commits du fichier `config.js` ?
+```sh
+git log -- config.js
 retire la clé API et documente la bonne pratique
-
+```
 ### Partie 6 — Réflexion
 
-15. Pourquoi est-il important de **taguer** des versions dans un projet ?  \
+15. Pourquoi est-il important de **taguer** des versions dans un projet ? 
+```sh
 Les tags dans Git servent à marquer des points précis de l’historique, généralement pour identifier des versions stables ou importantes.
+```
 
-16. Que peut-on déduire du style de travail de l'équipe à partir de cet historique GIT ? \
+16. Que peut-on déduire du style de travail de l'équipe à partir de cet historique GIT ?
+```sh
 l’équipe semble suivre un workflow Git structuré, des commits atomiques, avec des branches dédiées aux fonctionnalités, correctifs et expérimentations, des merges réguliers dans main, et une gestion claire des versions avec des tags.
-
+```
 Bonne chance, et surtout... **ne vous perdez pas dans le log !** 😉
