@@ -86,7 +86,11 @@ remotes/origin/experiment/dark-mode n'est pas merge car il est dans la branche e
 
 ### Partie 5 — Analyse du contenu
 
-11. Quelle est la **différence principale** entre les fichiers `index.html` dans les versions `v0.1` et `v0.2` et quelle commande permet de le voir rapidement ?  
+11. Quelle est la **différence principale** entre les fichiers `index.html` dans les versions `v0.1` et `v0.2` et quelle commande permet de le voir rapidement ? \
+git diff v0.1 v0.2 -- index.html\
+La principale différence est l’ajout de la barre de navigation dans l’en-tête de la page.
+
+
 12. Que contient la branche `feature/login` ?  
 13. Dans quelle branche a été ajouté le code pour le **mode sombre** ?  
 14. Quelle bonne pratique de sécurité est évoquée dans les commits du fichier `config.js` ?
