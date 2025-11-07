@@ -104,7 +104,10 @@ retire la clé API et documente la bonne pratique
 
 ### Partie 6 — Réflexion
 
-15. Pourquoi est-il important de **taguer** des versions dans un projet ?  
-16. Que peut-on déduire du style de travail de l'équipe à partir de cet historique GIT ?  
+15. Pourquoi est-il important de **taguer** des versions dans un projet ?  \
+Les tags dans Git servent à marquer des points précis de l’historique, généralement pour identifier des versions stables ou importantes.
+
+16. Que peut-on déduire du style de travail de l'équipe à partir de cet historique GIT ? \
+l’équipe semble suivre un workflow Git structuré, des commits atomiques, avec des branches dédiées aux fonctionnalités, correctifs et expérimentations, des merges réguliers dans main, et une gestion claire des versions avec des tags.
 
 Bonne chance, et surtout... **ne vous perdez pas dans le log !** 😉
