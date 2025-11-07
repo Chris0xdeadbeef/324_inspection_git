@@ -80,7 +80,7 @@ docs: ajoute un changelog de base
  git log --merges --oneline\
 login, typo et header
 
-10. Quelle branche **n'a pas été fusionnée** ? Pourquoi, selon vous ? 
+10. Quelle branche **n'a pas été fusionnée** ? Pourquoi, selon vous ? \
 git branch -a --no-merged main\
 remotes/origin/experiment/dark-mode n'est pas merge car il est dans la branche experiment qui potentiellement est une branche bac à sable
 
@@ -90,10 +90,17 @@ remotes/origin/experiment/dark-mode n'est pas merge car il est dans la branche e
 git diff v0.1 v0.2 -- index.html\
 La principale différence est l’ajout de la barre de navigation dans l’en-tête de la page.
 
+12. Que contient la branche `feature/login` ? \
+git branch -v\
+74cc148 feature(login): ajoute page de connexion et pseudo-fonction JS
 
-12. Que contient la branche `feature/login` ?  
-13. Dans quelle branche a été ajouté le code pour le **mode sombre** ?  
-14. Quelle bonne pratique de sécurité est évoquée dans les commits du fichier `config.js` ?
+13. Dans quelle branche a été ajouté le code pour le **mode sombre** ?  \
+git log --all -S "dark" --oneline\
+dans la branche dark-mode
+
+14. Quelle bonne pratique de sécurité est évoquée dans les commits du fichier `config.js` ?\
+git log -- config.js\
+retire la clé API et documente la bonne pratique
 
 ### Partie 6 — Réflexion
 
