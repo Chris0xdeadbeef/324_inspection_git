@@ -76,8 +76,13 @@ docs: ajoute un changelog de base
 
 ### Partie 4 — Branches et fusions
 
-9. Quelles branches ont été fusionnées dans `main` ?  
+9. Quelles branches ont été fusionnées dans `main` ? \
+ git log --merges --oneline\
+login, typo et header
+
 10. Quelle branche **n'a pas été fusionnée** ? Pourquoi, selon vous ? 
+git branch -a --no-merged main\
+remotes/origin/experiment/dark-mode n'est pas merge car il est dans la branche experiment qui potentiellement est une branche bac à sable
 
 ### Partie 5 — Analyse du contenu
 
