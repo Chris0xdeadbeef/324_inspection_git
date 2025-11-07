@@ -64,18 +64,15 @@ bea2d1a
 
 6. Quel commit a ensuite corrigé cette erreur ?\
 git log --grep="API" --oneline\
-1b682c9
+1b682c9 chore(config): retire la clé API et documente la bonne pratique
 
 7. Trouvez le commit où le **titre de la page d'accueil** a été corrigé.\
 git log --grep="titre" --oneline\
-6317c07
+6317c07 (origin/hotfix/typo) hotfix: corrige la typo 'Wolrd' dans le titre
 
 8. Quel est le message du commit qui a **ajouté le fichier `CHANGELOG.md`** et quelle commande avez-vous utilisé ?\
  git log --oneline --name-status\
 docs: ajoute un changelog de base
-
-
-
 
 ### Partie 4 — Branches et fusions
 
